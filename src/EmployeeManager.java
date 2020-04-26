@@ -1,6 +1,6 @@
 import java.io.FileReader;
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import org.json.simple.JSONArray; 
 import org.json.simple.JSONObject; 
@@ -8,14 +8,29 @@ import org.json.simple.parser.*;
 
 public class EmployeeManager {
 	private HashMap<String, Employee> employeeMap;
+	private ArrayList<Employee> orderedEmployees;
 	
 	public EmployeeManager() {
 		try {
 			this.generateEmployeeMap();
+			this.setOrderedEmployees();
 			System.out.println(employeeMap);
 		} catch(Exception ex) {
 			System.out.println(ex.getMessage());
 		}
+	}
+	
+	public ArrayList<Employee> getOrderedEmployees() {
+		return this.orderedEmployees;
+	}
+	
+	public Employee getNextAvailableEmployee() {
+		Employee nextEmployee = orderedEmployees.get(0);
+		
+		// Move the employee to the end of the list
+		orderedEmployees.add(nextEmployee);
+		orderedEmployees.remove(0);
+		return nextEmployee;
 	}
 	
 	private void generateEmployeeMap() throws Exception {
@@ -34,7 +49,9 @@ public class EmployeeManager {
 		}
 	}
 	
-	public Collection<Employee> getOrderedEmployees() {
-		return this.employeeMap.values();
+	private void setOrderedEmployees() {
+		ArrayList<Employee> employees = new ArrayList<Employee>(this.employeeMap.values());
+		Collections.sort(employees);
+		this.orderedEmployees = employees;
 	}
 }

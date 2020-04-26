@@ -32,9 +32,9 @@ public class Employee implements Comparable<Employee> {
     public int compareTo(Employee compareEmployee) {
     	Long otherOrderPosition = compareEmployee.getOrderPosition();
     	if(this.orderPosition < otherOrderPosition) {
-    		return 1;
-    	} else if(this.orderPosition > otherOrderPosition) {
     		return -1;
+    	} else if(this.orderPosition > otherOrderPosition) {
+    		return 1;
     	} else {
     		return 0;
     	}

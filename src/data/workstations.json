@@ -1,0 +1,38 @@
+[
+	{
+		"name": "Receiving",
+		"numEmployees": 1,
+		"isDefault": false,
+		"priorityLevel": 1
+	},
+	{
+		"name": "Datawipe",
+		"numEmployees": 1,
+		"isDefault": false,
+		"priorityLevel": 1
+	},
+	{
+		"name": "Triage",
+		"numEmployees": 1,
+		"isDefault": false,
+		"priorityLevel": 1
+	},
+	{
+		"name": "AOD",
+		"numEmployees": 1,
+		"isDefault": false,
+		"priorityLevel": 1
+	},
+	{
+		"name": "Shipping",
+		"numEmployees": 1,
+		"isDefault": false,
+		"priorityLevel": 1
+	},
+	{
+		"name": "Repair",
+		"numEmployees": -1,
+		"isDefault": true,
+		"priorityLevel": 2
+	}
+]

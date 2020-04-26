@@ -1,12 +1,24 @@
-import java.util.Collection;
+import java.util.ArrayList;
 
 public class WorkScheduler {
     public static void main(String[] args) throws Exception {
     	EmployeeManager employeeManager = new EmployeeManager();
-    	Collection<Employee> sortedEmployees = employeeManager.getOrderedEmployees();
+    	ArrayList<Employee> sortedEmployees = employeeManager.getOrderedEmployees();
     	
-    	for(Employee employee: sortedEmployees) {
-    		System.out.println("Name: " + employee.getName() + " Order: " + employee.getOrderPosition());
+    	WorkStationManager workStationManager = new WorkStationManager();
+    	ArrayList<WorkStation> workStations = workStationManager.getWorkStationListByPriority();
+    	
+    	ArrayList<WorkStationAssignment> workStationAssignments = new ArrayList<WorkStationAssignment>();
+    	for(Week.Weekdays day: Week.Weekdays.values()) {
+    		for(WorkStation wStation: workStations) {
+        		for(int i = 0; i < wStation.getNumEmployees(); i++) {
+        			workStationAssignments.add(new WorkStationAssignment(wStation, employeeManager.getNextAvailableEmployee(), day));
+        		}
+        	}
+    	}
+
+    	for(WorkStationAssignment wsa: workStationAssignments) {
+    		System.out.println(wsa.getWorkStation().getName() + " : " + wsa.getEmployee().getName() + " : " + wsa.getWeekday());
     	}
     }
 }
