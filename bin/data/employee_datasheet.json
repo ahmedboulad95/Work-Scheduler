@@ -2,51 +2,121 @@
     {
         "employeeId": "001",
         "name": "Richard",
-        "orderPosition": 1
+        "orderPosition": 1,
+		"workingDays": {
+			"MONDAY": true,
+			"TUESDAY": true,
+			"WEDNESDAY": true,
+			"THURSDAY": true,
+			"FRIDAY": false
+		}
     },
     {
         "employeeId": "002",
         "name": "Tom",
-        "orderPosition": 2
+        "orderPosition": 2,
+		"workingDays": {
+			"MONDAY": true,
+			"TUESDAY": true,
+			"WEDNESDAY": true,
+			"THURSDAY": true,
+			"FRIDAY": false
+		}
     },
     {
         "employeeId": "003",
         "name": "Dave",
-        "orderPosition": 3
+        "orderPosition": 3,
+		"workingDays": {
+			"MONDAY": true,
+			"TUESDAY": true,
+			"WEDNESDAY": true,
+			"THURSDAY": true,
+			"FRIDAY": false
+		}
     },
     {
         "employeeId": "004",
         "name": "John",
-        "orderPosition": 4
+        "orderPosition": 4,
+		"workingDays": {
+			"MONDAY": true,
+			"TUESDAY": true,
+			"WEDNESDAY": true,
+			"THURSDAY": true,
+			"FRIDAY": false
+		}
     },
     {
         "employeeId": "005",
         "name": "Nick",
-        "orderPosition": 5
+        "orderPosition": 5,
+		"workingDays": {
+			"MONDAY": true,
+			"TUESDAY": true,
+			"WEDNESDAY": true,
+			"THURSDAY": true,
+			"FRIDAY": false
+		}
     },
     {
         "employeeId": "006",
         "name": "Stacy",
-        "orderPosition": 6
+        "orderPosition": 6,
+		"workingDays": {
+			"MONDAY": false,
+			"TUESDAY": true,
+			"WEDNESDAY": true,
+			"THURSDAY": true,
+			"FRIDAY": true
+		}
     },
     {
         "employeeId": "007",
         "name": "Jessica",
-        "orderPosition": 7
+        "orderPosition": 7,
+		"workingDays": {
+			"MONDAY": false,
+			"TUESDAY": true,
+			"WEDNESDAY": true,
+			"THURSDAY": true,
+			"FRIDAY": true
+		}
     },
     {
         "employeeId": "008",
         "name": "Tim",
-        "orderPosition": 8
+        "orderPosition": 8,
+		"workingDays": {
+			"MONDAY": false,
+			"TUESDAY": true,
+			"WEDNESDAY": true,
+			"THURSDAY": true,
+			"FRIDAY": true
+		}
     },
     {
         "employeeId": "009",
         "name": "Dale",
-        "orderPosition": 9
+        "orderPosition": 9,
+		"workingDays": {
+			"MONDAY": false,
+			"TUESDAY": true,
+			"WEDNESDAY": true,
+			"THURSDAY": true,
+			"FRIDAY": true
+		}
     },
     {
         "employeeId": "010",
         "name": "Jeff",
-        "orderPosition": 10
+        "orderPosition": 10,
+		"workingDays": {
+			"MONDAY": false,
+			"TUESDAY": true,
+			"WEDNESDAY": true,
+			"THURSDAY": true,
+			"FRIDAY": true
+		}
     }
 ]
